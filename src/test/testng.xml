@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="coffeeSuite">
+  <test thread-count="5" name="coffeeTest">
+    <classes>
+      <class name="test_cases.Backtohome_test"/>
+      <class name="test_cases.Inventory_page_Test"/>
+      <class name="test_cases.Login_Page_Test"/>
+      <class name="test_cases.FlipkartTest"/>
+      <class name="test_cases.Payment_Finish_Test"/>
+      <class name="test_cases.CheckoutPageTest"/>
+      <class name="test_cases.Verify_Multi_creds_Test"/>
+      <class name="test_cases.Cart_test"/>
+    </classes>
+  </test> <!-- coffeeTest -->
+</suite> <!-- coffeeSuite -->

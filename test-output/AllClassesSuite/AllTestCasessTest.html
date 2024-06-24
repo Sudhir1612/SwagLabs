@@ -1,0 +1,736 @@
+<html>
+<head>
+<title>TestNG:  AllTestCasessTest</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>AllTestCasessTest</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>32/1/3</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Jun 13 10:14:24 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>144 seconds (144212 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='test_cases.Coffee_Page_Test.coffeesetup()'><b>coffeesetup</b><br>Test class: test_cases.Coffee_Page_Test</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equals(Object)&quot; because &quot;browser&quot; is null
+	at base.Coffee_Base.coffee(Coffee_Base.java:19)
+	at test_cases.Coffee_Page_Test.coffeesetup(Coffee_Page_Test.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1012373446", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1012373446'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equals(Object)&quot; because &quot;browser&quot; is null
+	at base.Coffee_Base.coffee(Coffee_Base.java:19)
+	at test_cases.Coffee_Page_Test.coffeesetup(Coffee_Page_Test.java:20)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>test_cases.Coffee_Page_Test@158a8276</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='test_cases.Coffee_Page_Test.closebrowser()'><b>closebrowser</b><br>Test class: test_cases.Coffee_Page_Test</td>
+<td></td>
+<td>0</td>
+<td>test_cases.Coffee_Page_Test@158a8276</td></tr>
+<tr>
+<td title='test_cases.Coffee_Page_Test.closebrowser()'><b>closebrowser</b><br>Test class: test_cases.Coffee_Page_Test</td>
+<td></td>
+<td>0</td>
+<td>test_cases.Coffee_Page_Test@158a8276</td></tr>
+<tr>
+<td title='test_cases.Coffee_Page_Test.closebrowser()'><b>closebrowser</b><br>Test class: test_cases.Coffee_Page_Test</td>
+<td></td>
+<td>0</td>
+<td>test_cases.Coffee_Page_Test@158a8276</td></tr>
+<tr>
+<td title='test_cases.Coffee_Page_Test.coffeesetup()'><b>coffeesetup</b><br>Test class: test_cases.Coffee_Page_Test</td>
+<td></td>
+<td>0</td>
+<td>test_cases.Coffee_Page_Test@158a8276</td></tr>
+<tr>
+<td title='test_cases.Coffee_Page_Test.coffeesetup()'><b>coffeesetup</b><br>Test class: test_cases.Coffee_Page_Test</td>
+<td></td>
+<td>0</td>
+<td>test_cases.Coffee_Page_Test@158a8276</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='test_cases.Payment_Finish_Test.Clickonfinishbtntest()'><b>Clickonfinishbtntest</b><br>Test class: test_cases.Payment_Finish_Test</td>
+<td><div><pre>java.lang.AssertionError: expected [https://www.saucedemo.com/checkout-complete.html] but found [Price Total]
+	at test_cases.Payment_Finish_Test.Clickonfinishbtntest(Payment_Finish_Test.java:87)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1641292405", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1641292405'><pre>java.lang.AssertionError: expected [https://www.saucedemo.com/checkout-complete.html] but found [Price Total]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at test_cases.Payment_Finish_Test.Clickonfinishbtntest(Payment_Finish_Test.java:87)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>test_cases.Payment_Finish_Test@17f7cd29</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='test_cases.Inventory_page_Test.add6productstest()'><b>add6productstest</b><br>Test class: test_cases.Inventory_page_Test<br/>
+<a href="#Output-1484960258" onClick='toggleBox("Output-1484960258", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1484960258" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1484960258">
+Total Products add to Cart = 6<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>test_cases.Inventory_page_Test@bccb269</td></tr>
+<tr>
+<td title='test_cases.CheckoutPageTest.verifycancelbtntest()'><b>verifycancelbtntest</b><br>Test class: test_cases.CheckoutPageTest<br/>
+<a href="#Output-1889004246" onClick='toggleBox("Output-1889004246", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1889004246" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1889004246">
+Cancel Button is Displayed = true<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>test_cases.CheckoutPageTest@7d8704ef</td></tr>
+<tr>
+<td title='test_cases.Inventory_page_Test.verifyfacebooklogotest()'><b>verifyfacebooklogotest</b><br>Test class: test_cases.Inventory_page_Test<br/>
+<a href="#Output-285831951" onClick='toggleBox("Output-285831951", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-285831951" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-285831951">
+Facebook Logo Is Present = true<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>test_cases.Inventory_page_Test@bccb269</td></tr>
+<tr>
+<td title='test_cases.Payment_Finish_Test.Verifycancelbtntest()'><b>Verifycancelbtntest</b><br>Test class: test_cases.Payment_Finish_Test<br/>
+<a href="#Output-82211311" onClick='toggleBox("Output-82211311", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-82211311" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-82211311">
+Cancel Button is Displayed = true<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>test_cases.Payment_Finish_Test@17f7cd29</td></tr>
+<tr>
+<td title='test_cases.Inventory_page_Test.verifypagelogoTest()'><b>verifypagelogoTest</b><br>Test class: test_cases.Inventory_page_Test<br/>
+<a href="#Output-1219735992" onClick='toggleBox("Output-1219735992", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1219735992" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1219735992">
+Page Logo Is Present = true<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>test_cases.Inventory_page_Test@bccb269</td></tr>
+<tr>
+<td title='test_cases.Payment_Finish_Test.Verifyoverviewtitletest()'><b>Verifyoverviewtitletest</b><br>Test class: test_cases.Payment_Finish_Test<br/>
+<a href="#Output-376042725" onClick='toggleBox("Output-376042725", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-376042725" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-376042725">
+Finish Page Overview Title =Checkout: Overview<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>test_cases.Payment_Finish_Test@17f7cd29</td></tr>
+<tr>
+<td title='test_cases.Inventory_page_Test.verifylinkedinlogotest()'><b>verifylinkedinlogotest</b><br>Test class: test_cases.Inventory_page_Test<br/>
+<a href="#Output-789025546" onClick='toggleBox("Output-789025546", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-789025546" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-789025546">
+linkedin Logo Is Present = true<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>test_cases.Inventory_page_Test@bccb269</td></tr>
+<tr>
+<td title='test_cases.Backtohome_test.verifycompletetitletest()'><b>verifycompletetitletest</b><br>Test class: test_cases.Backtohome_test<br/>
+<a href="#Output-556662073" onClick='toggleBox("Output-556662073", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-556662073" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-556662073">
+checkout complete Title =Checkout: Complete!<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>test_cases.Backtohome_test@752325ad</td></tr>
+<tr>
+<td title='test_cases.Cart_test.verifythreelinebtntest()'><b>verifythreelinebtntest</b><br>Test class: test_cases.Cart_test<br/>
+<a href="#Output-324097801" onClick='toggleBox("Output-324097801", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-324097801" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-324097801">
+Three line button Is Present = true<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>test_cases.Cart_test@13b6aecc</td></tr>
+<tr>
+<td title='test_cases.Payment_Finish_Test.Verifypaymentinfotest()'><b>Verifypaymentinfotest</b><br>Test class: test_cases.Payment_Finish_Test<br/>
+<a href="#Output-1688786293" onClick='toggleBox("Output-1688786293", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1688786293" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1688786293">
+Finish Page Payment Title =Payment Information:<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>test_cases.Payment_Finish_Test@17f7cd29</td></tr>
+<tr>
+<td title='test_cases.Backtohome_test.verifyimagetest()'><b>verifyimagetest</b><br>Test class: test_cases.Backtohome_test<br/>
+<a href="#Output-411474203" onClick='toggleBox("Output-411474203", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-411474203" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-411474203">
+image is Displayed = true<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>test_cases.Backtohome_test@752325ad</td></tr>
+<tr>
+<td title='test_cases.Inventory_page_Test.remove2productstest()'><b>remove2productstest</b><br>Test class: test_cases.Inventory_page_Test<br/>
+<a href="#Output-1698322791" onClick='toggleBox("Output-1698322791", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1698322791" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1698322791">
+Total Products After Remove To The Cart = 4<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>test_cases.Inventory_page_Test@bccb269</td></tr>
+<tr>
+<td title='test_cases.Cart_test.verifydiscriptionlabletest()'><b>verifydiscriptionlabletest</b><br>Test class: test_cases.Cart_test<br/>
+<a href="#Output-1404437909" onClick='toggleBox("Output-1404437909", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1404437909" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1404437909">
+Description Lable =Description<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>test_cases.Cart_test@13b6aecc</td></tr>
+<tr>
+<td title='test_cases.CheckoutPageTest.inputinformationtest()'><b>inputinformationtest</b><br>Test class: test_cases.CheckoutPageTest<br/>
+<a href="#Output-837409103" onClick='toggleBox("Output-837409103", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-837409103" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-837409103">
+checkout Page Step2 URL =https://www.saucedemo.com/checkout-step-two.html<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>test_cases.CheckoutPageTest@7d8704ef</td></tr>
+<tr>
+<td title='test_cases.Login_Page_Test.loginToApplicationTest()'><b>loginToApplicationTest</b><br>Test class: test_cases.Login_Page_Test<br/>
+<a href="#Output-1389771646" onClick='toggleBox("Output-1389771646", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1389771646" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1389771646">
+Log In Is Successful =https://www.saucedemo.com/inventory.html<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>test_cases.Login_Page_Test@609cd4d8</td></tr>
+<tr>
+<td title='test_cases.Cart_test.verifycontinueshoppingbtntest()'><b>verifycontinueshoppingbtntest</b><br>Test class: test_cases.Cart_test<br/>
+<a href="#Output-691601680" onClick='toggleBox("Output-691601680", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-691601680" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-691601680">
+Continue Shopping Button Is Present = true<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>test_cases.Cart_test@13b6aecc</td></tr>
+<tr>
+<td title='test_cases.Backtohome_test.verifythankyoutitletest()'><b>verifythankyoutitletest</b><br>Test class: test_cases.Backtohome_test<br/>
+<a href="#Output-1758060579" onClick='toggleBox("Output-1758060579", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1758060579" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1758060579">
+checkout thank you Title =Thank you for your order!<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>test_cases.Backtohome_test@752325ad</td></tr>
+<tr>
+<td title='test_cases.Login_Page_Test.verifytitleofapplicationTest()'><b>verifytitleofapplicationTest</b><br>Test class: test_cases.Login_Page_Test</td>
+<td></td>
+<td>0</td>
+<td>test_cases.Login_Page_Test@609cd4d8</td></tr>
+<tr>
+<td title='test_cases.Backtohome_test.clickonbackbtntest()'><b>clickonbackbtntest</b><br>Test class: test_cases.Backtohome_test<br/>
+<a href="#Output-225753796" onClick='toggleBox("Output-225753796", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-225753796" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-225753796">
+Back To Product Page URL =https://www.saucedemo.com/inventory.html<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>test_cases.Backtohome_test@752325ad</td></tr>
+<tr>
+<td title='test_cases.Login_Page_Test.verifyurlofapplicationTest()'><b>verifyurlofapplicationTest</b><br>Test class: test_cases.Login_Page_Test</td>
+<td></td>
+<td>0</td>
+<td>test_cases.Login_Page_Test@609cd4d8</td></tr>
+<tr>
+<td title='test_cases.Inventory_page_Test.verifyTexttest()'><b>verifyTexttest</b><br>Test class: test_cases.Inventory_page_Test<br/>
+<a href="#Output-1704512171" onClick='toggleBox("Output-1704512171", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1704512171" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1704512171">
+text is Visible = © 2024 Sauce Labs. All Rights Reserved. Terms of Service | Privacy Policy<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>test_cases.Inventory_page_Test@bccb269</td></tr>
+<tr>
+<td title='test_cases.Cart_test.verifychechoutbtntest()'><b>verifychechoutbtntest</b><br>Test class: test_cases.Cart_test<br/>
+<a href="#Output-654067279" onClick='toggleBox("Output-654067279", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-654067279" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-654067279">
+checkout Page Step1 URL =https://www.saucedemo.com/checkout-step-one.html<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>test_cases.Cart_test@13b6aecc</td></tr>
+<tr>
+<td title='test_cases.Cart_test.verifycarttitletest()'><b>verifycarttitletest</b><br>Test class: test_cases.Cart_test<br/>
+<a href="#Output-588125755" onClick='toggleBox("Output-588125755", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-588125755" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-588125755">
+Cart Title =Your Cart<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>test_cases.Cart_test@13b6aecc</td></tr>
+<tr>
+<td title='test_cases.Cart_test.verifypagetitletest()'><b>verifypagetitletest</b><br>Test class: test_cases.Cart_test<br/>
+<a href="#Output-1700987158" onClick='toggleBox("Output-1700987158", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1700987158" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1700987158">
+Cart Page Title =Swag Labs<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>test_cases.Cart_test@13b6aecc</td></tr>
+<tr>
+<td title='test_cases.CheckoutPageTest.verifyinfotitletest()'><b>verifyinfotitletest</b><br>Test class: test_cases.CheckoutPageTest<br/>
+<a href="#Output-2046967348" onClick='toggleBox("Output-2046967348", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2046967348" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2046967348">
+checkout Page Step2 Info Title =Checkout: Your Information<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>test_cases.CheckoutPageTest@7d8704ef</td></tr>
+<tr>
+<td title='test_cases.Payment_Finish_Test.Verifypricetitaltest()'><b>Verifypricetitaltest</b><br>Test class: test_cases.Payment_Finish_Test<br/>
+<a href="#Output-2141086055" onClick='toggleBox("Output-2141086055", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2141086055" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2141086055">
+Finish Page Price Total Title =Price Total<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>test_cases.Payment_Finish_Test@17f7cd29</td></tr>
+<tr>
+<td title='test_cases.Inventory_page_Test.verifyproductTitleTest()'><b>verifyproductTitleTest</b><br>Test class: test_cases.Inventory_page_Test<br/>
+<a href="#Output-1700334050" onClick='toggleBox("Output-1700334050", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1700334050" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1700334050">
+Product Title = Products<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>test_cases.Inventory_page_Test@bccb269</td></tr>
+<tr>
+<td title='test_cases.Cart_test.verifycartpageUrltest()'><b>verifycartpageUrltest</b><br>Test class: test_cases.Cart_test<br/>
+<a href="#Output-1836115595" onClick='toggleBox("Output-1836115595", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1836115595" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1836115595">
+Cart Page URL =https://www.saucedemo.com/cart.html<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>test_cases.Cart_test@13b6aecc</td></tr>
+<tr>
+<td title='test_cases.Inventory_page_Test.verifyTwitterLogoTest()'><b>verifyTwitterLogoTest</b><br>Test class: test_cases.Inventory_page_Test<br/>
+<a href="#Output-1244536402" onClick='toggleBox("Output-1244536402", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1244536402" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1244536402">
+Twitter Logo Is Present = true<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>test_cases.Inventory_page_Test@bccb269</td></tr>
+<tr>
+<td title='test_cases.Payment_Finish_Test.Verifyshippinginfotest()'><b>Verifyshippinginfotest</b><br>Test class: test_cases.Payment_Finish_Test<br/>
+<a href="#Output-42047036" onClick='toggleBox("Output-42047036", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-42047036" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-42047036">
+Finish Page Shipping Title =Shipping Information:<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>test_cases.Payment_Finish_Test@17f7cd29</td></tr>
+<tr>
+<td title='test_cases.Backtohome_test.verifytexttest()'><b>verifytexttest</b><br>Test class: test_cases.Backtohome_test<br/>
+<a href="#Output-796168203" onClick='toggleBox("Output-796168203", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-796168203" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-796168203">
+checkout thank you Text =Your order has been dispatched, and will arrive just as fast as the pony can get there!<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>test_cases.Backtohome_test@752325ad</td></tr>
+<tr>
+<td title='test_cases.Cart_test.verifyquantitylabletest()'><b>verifyquantitylabletest</b><br>Test class: test_cases.Cart_test<br/>
+<a href="#Output-1589251269" onClick='toggleBox("Output-1589251269", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1589251269" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1589251269">
+QTY Lable =QTY<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>test_cases.Cart_test@13b6aecc</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='test_cases.Coffee_Page_Test.login_toapplicationtest()'><b>login_toapplicationtest</b><br>Test class: test_cases.Coffee_Page_Test</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equals(Object)&quot; because &quot;browser&quot; is null
+	at base.Coffee_Base.coffee(Coffee_Base.java:19)
+	at test_cases.Coffee_Page_Test.coffeesetup(Coffee_Page_Test.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1803955991", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1803955991'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equals(Object)&quot; because &quot;browser&quot; is null
+	at base.Coffee_Base.coffee(Coffee_Base.java:19)
+	at test_cases.Coffee_Page_Test.coffeesetup(Coffee_Page_Test.java:20)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>test_cases.Coffee_Page_Test@158a8276</td></tr>
+<tr>
+<td title='test_cases.Coffee_Page_Test.UrlOfApplicationtest()'><b>UrlOfApplicationtest</b><br>Test class: test_cases.Coffee_Page_Test</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equals(Object)&quot; because &quot;browser&quot; is null
+	at base.Coffee_Base.coffee(Coffee_Base.java:19)
+	at test_cases.Coffee_Page_Test.coffeesetup(Coffee_Page_Test.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1820277494", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1820277494'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equals(Object)&quot; because &quot;browser&quot; is null
+	at base.Coffee_Base.coffee(Coffee_Base.java:19)
+	at test_cases.Coffee_Page_Test.coffeesetup(Coffee_Page_Test.java:20)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>test_cases.Coffee_Page_Test@158a8276</td></tr>
+<tr>
+<td title='test_cases.Coffee_Page_Test.TitleOfApplicationtest()'><b>TitleOfApplicationtest</b><br>Test class: test_cases.Coffee_Page_Test</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equals(Object)&quot; because &quot;browser&quot; is null
+	at base.Coffee_Base.coffee(Coffee_Base.java:19)
+	at test_cases.Coffee_Page_Test.coffeesetup(Coffee_Page_Test.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1647809146", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1647809146'><pre>java.lang.NullPointerException: Cannot invoke &quot;String.equals(Object)&quot; because &quot;browser&quot; is null
+	at base.Coffee_Base.coffee(Coffee_Base.java:19)
+	at test_cases.Coffee_Page_Test.coffeesetup(Coffee_Page_Test.java:20)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>test_cases.Coffee_Page_Test@158a8276</td></tr>
+</table><p>
+</body>
+</html>

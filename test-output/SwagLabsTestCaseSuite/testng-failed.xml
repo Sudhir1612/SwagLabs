@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [SwagLabsTestCaseSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="SwagLabsTestCasessTest(failed)">
+    <classes>
+      <class name="test_cases.Backtohome_test">
+        <methods>
+          <include name="clickonbackbtntest"/>
+          <include name="verifycompletetitletest"/>
+          <include name="verifyimagetest"/>
+          <include name="closebrowser"/>
+          <include name="verifytexttest"/>
+          <include name="setup"/>
+          <include name="verifythankyoutitletest"/>
+        </methods>
+      </class> <!-- test_cases.Backtohome_test -->
+    </classes>
+  </test> <!-- SwagLabsTestCasessTest(failed) -->
+</suite> <!-- Failed suite [SwagLabsTestCaseSuite] -->

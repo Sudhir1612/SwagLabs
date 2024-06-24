@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [groupSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="groupTest(failed)">
+    <groups>
+      <run>
+        <include name="Sanity"/>
+        <exclude name="Retest"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="test_cases.Inventory_page_Test">
+        <methods>
+          <include name="remove2productstest"/>
+          <include name="verifyTexttest"/>
+          <include name="verifyproductTitleTest"/>
+          <include name="verifyfacebooklogotest"/>
+        </methods>
+      </class> <!-- test_cases.Inventory_page_Test -->
+      <class name="test_cases.Login_Page_Test">
+        <methods>
+          <include name="verifytitleofapplicationTest"/>
+        </methods>
+      </class> <!-- test_cases.Login_Page_Test -->
+    </classes>
+  </test> <!-- groupTest(failed) -->
+</suite> <!-- Failed suite [groupSuite] -->
